@@ -3,8 +3,8 @@ import json
 import os
 
 
-stored_files_dir = 'files'
-dir_files_file = 'filemap'
+stored_files_dir = 'stored_files'
+dir_files_file = 'file_map'
 
 
 def diff_contents(from_contents, to_contents, **kwargs):
@@ -26,7 +26,7 @@ def input_bool(prompt):
 def load_actual_file(filename, directory):
   return open(os.path.join(directory, filename), 'r').read()
 
-def load_existing_files():
+def load_stored_files():
   return {
     filename: open(stored_file_path(filename), 'r').read()
     for filename in os.listdir(stored_files_dir)
