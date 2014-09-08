@@ -54,7 +54,7 @@ def deploy_stored_file(filename, directory, stored_contents):
 def main():
   file_dirs = load_file_dirs()
   stored_files = load_stored_files()
-  assert set(file_dirs) == set(stored_files), 'Stored config files must be updated to match filemap.'
+  assert set(file_dirs) == set(stored_files), 'Stored config files must be updated to match file_map.'
   for filename, directory in file_dirs.iteritems():
     deploy_stored_file(filename, directory, stored_files[filename])
 
