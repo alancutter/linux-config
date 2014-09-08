@@ -1,0 +1,74 @@
+[user]
+    name = Alan Cutter
+    email = alancutter@chromium.org
+[core]
+    autocrlf = false
+    filemode = false
+    deltaBaseCacheLimit = 1G
+[alias]
+    a = apply
+    aa = add --all .
+    ab = archive-branches
+    ai = add -i
+    b = branch
+    bd = branch -D
+    bm = branch -m
+    bsut = branch --set-upstream-to
+    bsutom = branch --set-upstream-to origin/master
+    c = commit
+    ca = commit -a
+    caa = commit -a --amend -m ''
+    cam = commit -a -m
+    cdf = clean -df
+    cf = clean -f
+    cm = commit -m
+    cma = commit -m '' --amend
+    co = checkout
+    cob = checkout -t origin/master -b
+    coh = checkout HEAD
+    com = checkout origin/master
+    cu = cl upload --no-find-copies
+    d = diff
+    dc = diff --color=auto
+    dcc = diff --color=auto --cached
+    dch = diff --color=auto HEAD
+    dchns = diff --color=auto HEAD --name-status
+    dcm = diff --color=auto origin/master
+    dcmns = diff --color=auto origin/master --name-status
+    dcns = diff --color=auto --name-status
+    f = fetch
+    fo = fetch origin
+    gpc = grep -n --color=auto
+    h = help
+    lc = log --color=auto
+    lc1 = log --color=auto -1
+    lcf = log --color=auto --follow
+    lgc = log --graph --color=auto
+    lpc = log -p --color=auto
+    lpc1 = log -p --color=auto -1
+    lpc1ns = log -p --color=auto -1 --name-status
+    lpcns = log -p --color=auto --name-status
+    lpgc = log -p --graph --color=auto
+    lpgcns = log -p --graph --color=auto --name-status
+    p = push
+    pf = push -f
+    rb = rebase
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase --interactive
+    rbs = rebase --skip
+    rh = reset --hard
+    rhom = reset --hard origin/master
+    rl = rev-list
+    rl1 = rev-list -1
+    rlc = rev-list --count
+    rs = reset --soft
+    ssp = stash show -p
+    st = status
+    t = tag
+    td = tag -d
+    tn1 = tag -n1
+    tv = tag -v
+    ub = uploaded-branch
+[push]
+	default = simple

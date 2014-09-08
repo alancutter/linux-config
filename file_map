@@ -1,8 +1,18 @@
 [
   {
-    "directory": "~/tests",
+    "directory": "~",
     "files": [
-      "test.html"
+      ".bashrc",
+      ".gitconfig",
+      ".inputrc",
+      ".vimrc"
+    ]
+  },
+  {
+    "directory": "~/.config/sublime-text-3/Packages/User",
+    "files": [
+      "Default (Linux).sublime-keymap",
+      "Preferences.sublime-settings"
     ]
   }
 ]
