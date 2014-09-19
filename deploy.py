@@ -16,7 +16,7 @@ from utils import (
 def ensure_directory(path):
   if os.path.exists(path):
     return
-  os.mkdirs(path)
+  os.makedirs(path)
 
 
 def write_file(path, contents):
