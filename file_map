@@ -2,6 +2,7 @@
   {
     "directory": "~",
     "files": [
+      ".bash_aliases",
       ".bashrc",
       ".gitconfig",
       ".inputrc",
