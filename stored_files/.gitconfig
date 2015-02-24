@@ -13,9 +13,9 @@
     b = branch
     bd = branch -D
     bm = branch -m
+    bs = bisect
     bsut = branch --set-upstream-to
     bsutom = branch --set-upstream-to origin/master
-    c = commit
     ca = commit -a
     caa = commit -a --amend -m ''
     cam = commit -a -m
@@ -36,6 +36,7 @@
     dcm = diff --color=auto origin/master
     dcmns = diff --color=auto origin/master --name-status
     dcns = diff --color=auto --name-status
+    dd = describe --dirty
     f = fetch
     fo = fetch origin
     gpc = grep -n --color=auto

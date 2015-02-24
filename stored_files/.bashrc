@@ -3,7 +3,6 @@ PATH=$(echo $PATH | sed -e "s|/usr/local/buildtools/java/jdk/bin:||")
 
 # This section adds additional directories to the $PATH.
 export PATH=/usr/lib/ccache:"$PATH"
-export PATH=~/bin/google-cloud-sdk/bin:$PATH
 export PATH=~/repos/depot_tools:"$PATH"
 export PATH=~/repos/blink/Tools/Scripts:"$PATH"
 export PATH=~/scripts:"$PATH"
