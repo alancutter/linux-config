@@ -7,5 +7,8 @@
     { "keys": ["f4"], "command": "find_under" },
     { "keys": ["shift+f4"], "command": "find_under_prev" },
     { "keys": ["alt+up"], "command": "select_lines", "args": {"forward": false} },
-    { "keys": ["alt+down"], "command": "select_lines", "args": {"forward": true} }
+    { "keys": ["alt+down"], "command": "select_lines", "args": {"forward": true} },
+    { "keys": ["ctrl+'"], "command": "toggle_bookmark" },
+    { "keys": ["ctrl+shift+'"], "command": "clear_bookmarks" },
+    { "keys": ["alt+'"], "command": "select_all_bookmarks" }
 ]
