@@ -19,6 +19,7 @@
     ca = commit -a
     caa = commit -a --amend -m ''
     cam = commit -a -m
+    cb = current-branch
     cdf = clean -df
     cf = clean -f
     cm = commit -m
@@ -51,6 +52,7 @@
     lpcns = log -p --color=auto --name-status
     lpgc = log -p --graph --color=auto
     lpgcns = log -p --graph --color=auto --name-status
+    ms = merge --squash
     p = push
     pf = push -f
     rb = rebase
@@ -64,9 +66,11 @@
     rl1 = rev-list -1
     rlc = rev-list --count
     rs = reset --soft
+    sr = squash-rebase
     ssp = stash show -p
     st = status
     t = tag
+    tb = tracking-branch
     td = tag -d
     tn1 = tag -n1
     tv = tag -v
