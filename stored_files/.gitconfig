@@ -37,6 +37,7 @@
     dcm = diff --color=auto origin/master
     dcmns = diff --color=auto origin/master --name-status
     dcns = diff --color=auto --name-status
+    dct = diff --color=auto @{u}
     dd = describe --dirty
     f = fetch
     fo = fetch origin
