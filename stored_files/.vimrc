@@ -9,6 +9,7 @@ Plugin 'camelcasecomplete'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 call vundle#end()
 filetype plugin indent on
 

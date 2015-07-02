@@ -38,6 +38,7 @@
     dcmns = diff --color=auto origin/master --name-status
     dcns = diff --color=auto --name-status
     dct = diff --color=auto @{u}
+    dctns = diff --color=auto @{u} --name-status
     dd = describe --dirty
     f = fetch
     fo = fetch origin
@@ -53,6 +54,7 @@
     lpcns = log -p --color=auto --name-status
     lpgc = log -p --graph --color=auto
     lpgcns = log -p --graph --color=auto --name-status
+    mb = map-branches
     ms = merge --squash
     p = push
     pf = push -f
