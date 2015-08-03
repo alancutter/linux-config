@@ -26,8 +26,10 @@
     cma = commit -m '' --amend
     co = checkout
     cob = checkout -t origin/master -b
+    cod = checkout-downstream
     coh = checkout HEAD
     com = checkout origin/master
+    cou = checkout @{u}
     cu = cl upload --no-find-copies
     d = diff
     dc = diff --color=auto
@@ -37,9 +39,13 @@
     dcm = diff --color=auto origin/master
     dcmns = diff --color=auto origin/master --name-status
     dcns = diff --color=auto --name-status
-    dct = diff --color=auto @{u}
-    dctns = diff --color=auto @{u} --name-status
+    dcu = diff --color=auto @{u}
+    dcuns = diff --color=auto @{u} --name-status
     dd = describe --dirty
+    dw = diff --color-words
+    dwh = diff --color-words HEAD
+    dwm = diff --color-words origin/master
+    dwu = diff --color-words @{u}
     f = fetch
     fo = fetch origin
     gpc = grep -n --color=auto
@@ -62,6 +68,7 @@
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase --interactive
+    rbm = rebase origin/master
     rbs = rebase --skip
     rh = reset --hard
     rhom = reset --hard origin/master
@@ -69,6 +76,8 @@
     rl1 = rev-list -1
     rlc = rev-list --count
     rs = reset --soft
+    s = stash
+    sp = stash pop
     sr = squash-rebase
     ssp = stash show -p
     st = status

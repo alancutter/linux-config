@@ -7,7 +7,7 @@ export PATH=~/repos/depot_tools:"$PATH"
 export PATH=~/repos/blink/Tools/Scripts:"$PATH"
 export PATH=~/scripts:"$PATH"
 export GYP_GENERATORS="ninja"
-export EDITOR=vim
+export EDITOR="subl -w"
 export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
