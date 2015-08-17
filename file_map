@@ -7,7 +7,8 @@
       ".gitconfig",
       ".inputrc",
       ".screenrc",
-      ".vimrc"
+      ".vimrc",
+      ".xsession"
     ]
   },
   {
