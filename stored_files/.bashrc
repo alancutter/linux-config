@@ -12,6 +12,7 @@ export PATH=~/repos/blink/Tools/Scripts:"$PATH"
 export PATH=~/scripts:"$PATH"
 export GYP_GENERATORS="ninja"
 export EDITOR="subl -w"
+export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
 
 # If not running interactively, don't do anything
 case $- in

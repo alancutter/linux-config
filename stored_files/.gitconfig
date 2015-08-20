@@ -68,9 +68,11 @@
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase --interactive
+    rbim = rebase --interactive origin/master
     rbm = rebase origin/master
     rbs = rebase --skip
     rh = reset --hard
+    rhu = reset --hard @{u}
     rhom = reset --hard origin/master
     rl = rev-list
     rl1 = rev-list -1
@@ -88,4 +90,4 @@
     tv = tag -v
     ub = uploaded-branch
 [push]
-	default = simple
+    default = simple
