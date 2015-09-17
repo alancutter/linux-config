@@ -1,0 +1,40 @@
+#!/usr/bin/python
+
+from __future__ import print_function
+import subprocess
+
+
+def pick_item(prompt, items):
+  while True:
+    for item in enumerate(items):
+      print('%s: %s' % item)
+    try:
+      return items[int(raw_input(prompt + ': '))]
+    except EOFError:
+      print()
+      return
+    except KeyboardInterrupt:
+      raise
+    except:
+      print('Invalid input')
+
+
+def main():
+  current_branch = subprocess.check_output(['git', 'current-branch']).strip()
+  other_branches = [branch.strip() for branch in subprocess.check_output(['git', 'branch']).split('\n') if branch and not branch.startswith('*')]
+  downstream_branches = [branch for branch in other_branches if subprocess.check_output(['git', 'config', 'branch.' + branch + '.merge']) == 'refs/heads/%s\n' % current_branch]
+  if len(downstream_branches) == 0:
+    print('No downstream branch to checkout.')
+    return
+
+  if len(downstream_branches) == 1:
+    branch = downstream_branches[0]
+  else:
+    branch = pick_item('Select downstream branch to checkout', downstream_branches)
+
+  if branch:
+    subprocess.call(['git', 'checkout', branch])
+
+
+if __name__ == '__main__':
+  main()

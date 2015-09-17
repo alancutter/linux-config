@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Test whether there is an unreceived signal created by "s".
+
+if [ -f ~/temp/bash_signal ]; then
+    echo "SIGNAL"
+else
+    echo "NO SIGNAL"
+fi

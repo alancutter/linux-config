@@ -4,7 +4,7 @@ import os
 
 
 stored_files_dir = 'stored_files'
-dir_files_file = 'file_map'
+dir_files_file = 'file_map.json'
 
 
 def diff_contents(from_contents, to_contents, **kwargs):

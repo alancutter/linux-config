@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get ps -eF headers.
+HEADERS=$(ps -eF | head -n1)
+
+# Get window ID.
+PID=$(xprop | awk '/PID/ {print $3}')
+
+PDATA=$(ps -eF | grep -e "^\w*\s*$PID")
+
+# Show info.
+zenity --info --text="$HEADERS
+$PDATA"

@@ -1,0 +1,38 @@
+[
+  {
+    "directory": "~",
+    "files": [
+      ".bash_aliases",
+      ".bashrc",
+      ".gitconfig",
+      ".inputrc",
+      ".screenrc",
+      ".vimrc",
+      ".xinitrc"
+    ]
+  },
+  {
+    "directory": "~/.config/sublime-text-3/Packages/User",
+    "files": [
+      "Default (Linux).sublime-keymap",
+      "Preferences.sublime-settings"
+    ]
+  },
+  {
+    "directory": "~/scripts",
+    "files": [
+      "cks",
+      "git-archive-branches",
+      "git-checkout-downstream",
+      "git-current-branch",
+      "git-squash-rebase",
+      "git-stashswap",
+      "git-tracking-branch",
+      "git-uploaded-branch",
+      "regex",
+      "s",
+      "wpinfo",
+      "ws"
+    ]
+  }
+]

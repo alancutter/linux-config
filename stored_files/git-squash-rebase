@@ -1,0 +1,19 @@
+#!/bin/sh
+BRANCH=$(git current-branch)
+TRACKING=$(git tracking-branch)
+BASE=$(git merge-base $BRANCH $TRACKING)
+DIFF=$(git diff $BASE $BRANCH)
+OLD_COMMIT=$(git log -1 --pretty=%H)
+git reset --hard $TRACKING
+COMMIT_MESSAGE="Squash rebased $BRANCH onto $TRACKING.
+
+Previous commit position at: $OLD_COMMIT"
+if echo "$DIFF" | git apply -3; then
+  git add -A
+  git commit -m "$COMMIT_MESSAGE"
+  git log --color=auto -1
+else
+  echo "COMMIT_MESSAGE=$COMMIT_MESSAGE"
+  echo "Squash rebase failed!"
+  echo "Resolve conflicts and commit with the above commit message"
+fi

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Wait for a signal created by "s".
+
+sleep 1
+while [ ! -f ~/temp/bash_signal ]; do sleep 1; done
+rm ~/temp/bash_signal

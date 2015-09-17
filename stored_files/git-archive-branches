@@ -1,0 +1,100 @@
+#!/usr/bin/python
+
+# Interactive script for archiving git branches as tags.
+# Designed to work with a Rietveld workflow.
+
+from __future__ import print_function
+import subprocess
+
+status_output = subprocess.check_output(['git', 'cl', 'status']).splitlines()
+status_output = status_output[1:status_output.index('')]
+branch_status_lines = (map(str.strip, line.split(' : ')) for line in status_output)
+branch_issues = {}
+for branch, issue in branch_status_lines:
+  if branch != 'master':
+    branch_issues[branch] = issue if issue != 'None' else None
+branches = sorted(branch_issues.keys())
+
+def pick_branch():
+  while True:
+    print('Current branches:')
+    for i, branch in enumerate(branches):
+      print('  {}: {}\t({})'.format(i, branch, branch_issues[branch]))
+    try:
+      input = raw_input('Select branch to archive, q to quit: ')
+      if input == 'q':
+        return
+      return branches[int(input)]
+    except EOFError:
+      print()
+      return
+    except KeyboardInterrupt:
+      raise
+    except:
+      print('Invalid input')
+
+def pick_bool(prompt):
+  while True:
+    try:
+      input = raw_input(prompt + ' ([y]/n): ')
+      if input in ('', 'y'):
+        return True
+      elif input == 'n':
+        return False
+    except KeyboardInterrupt:
+      raise
+    except:
+      print('Invalid input')
+
+def create_tag(branch):
+  issue = branch_issues[branch]
+  landed = pick_bool('Did this change land?')
+  if branch[0] == '+' and (issue or landed):
+    tag = '_' + branch[1:]
+  else:
+    tag = branch
+  prefix = 'o' if landed else 'x'
+  tag = prefix + tag
+  message = issue if issue else ''
+  print('Tagging branch {} as {} with message: {}'.format(branch, tag, message))
+  tag_command = ['git', 'tag', '-m', message, tag, branch]
+  try:
+    subprocess.check_output(tag_command)
+    return True
+  except subprocess.CalledProcessError, e:
+    print(e.output)
+    if pick_bool('Try again with -f option to git tag?'):
+      tag_command.insert(2, '-f')
+      try:
+        subprocess.check_output(tag_command)
+        return True
+      except subprocess.CalledProcessError, e:
+        print(e.output)
+  print('Tagging branch {} as {} failed'.format(branch, tag))
+  return False
+
+def remove_branch(branch):
+  print('Deleting branch: {}'.format(branch))
+  try:
+    subprocess.check_output(['git', 'branch', '-D', branch])
+    branch_issues.pop(branch)
+    branches.remove(branch)
+    return
+  except subprocess.CalledProcessError, e:
+    print(e.output)
+  print('Deleting branch {} failed'.format(branch))
+
+def main():
+  while True:
+    if not branches:
+      print('No branches available to archive')
+      return
+    branch = pick_branch()
+    if not branch:
+      return
+    if create_tag(branch):
+      remove_branch(branch)
+
+if __name__ == '__main__':
+  main()
+

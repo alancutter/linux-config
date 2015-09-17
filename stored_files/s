@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Create a signal and release a pending call to "ws".
+
+touch ~/temp/bash_signal

@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+# Interactive script for archiving git branches as tags.
+# Designed to work with a Rietveld workflow.
+
+from __future__ import print_function
+import re
+import subprocess
+
+
+def main():
+  m = re.match(r'# On branch (.+)', subprocess.check_output(['git', 'status']))
+  if not m:
+    print('Not currently on any branch.')
+    return
+  branch = m.group(1)
+  if branch[0] != '+':
+    print('Branch', branch, 'not renamed.')
+    return
+  new_branch = '_' + branch[1:]
+  subprocess.check_call(['git', 'branch', '-m', branch, new_branch])
+  print('Branch', branch, 'renamed as:', new_branch)
+
+if __name__ == '__main__':
+  main()
