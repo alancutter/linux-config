@@ -10,7 +10,8 @@ export PATH=/usr/lib/ccache:"$PATH"
 export PATH=~/repos/depot_tools:"$PATH"
 export PATH=~/repos/blink/Tools/Scripts:"$PATH"
 export PATH=~/scripts:"$PATH"
-export GYP_GENERATORS="ninja"
+
+export GYP_CHROMIUM_NO_ACTION=1
 export EDITOR="subl -w"
 export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
 
