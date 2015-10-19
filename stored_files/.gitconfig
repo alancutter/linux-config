@@ -60,7 +60,7 @@
     lpcns = log -p --color=auto --name-status
     lpgc = log -p --graph --color=auto
     lpgcns = log -p --graph --color=auto --name-status
-    mb = map-branches
+    mb = map-branches -v
     ms = merge --squash
     p = push
     pf = push -f

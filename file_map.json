@@ -3,6 +3,7 @@
     "directory": "~",
     "files": [
       ".bash_aliases",
+      ".bash_functions",
       ".bashrc",
       ".gitconfig",
       ".inputrc",
