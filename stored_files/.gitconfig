@@ -91,3 +91,5 @@
     ub = uploaded-branch
 [push]
     default = simple
+[http]
+    cookiefile = /usr/local/google/home/alancutter/.gitcookies
