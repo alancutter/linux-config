@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 from __future__ import print_function
-import subprocess
+import sys
 
 from utils.downstream_branches import get_downstream_branches
 from utils.pick_item import pick_item
@@ -10,16 +10,11 @@ from utils.pick_item import pick_item
 def main():
   downstream_branches = get_downstream_branches()
   if len(downstream_branches) == 0:
-    print('No downstream branch to checkout.')
-    return
-
-  if len(downstream_branches) == 1:
-    branch = downstream_branches[0]
+    print('No downstream branches.', file=sys.stderr)
+  elif len(downstream_branches) == 1:
+    print(downstream_branches[0])
   else:
-    branch = pick_item(downstream_branches, 'Select downstream branch to checkout')
-
-  if branch:
-    subprocess.call(['git', 'checkout', branch])
+    print(pick_item(downstream_branches, 'Select downstream branch', file=sys.stderr))
 
 
 if __name__ == '__main__':

@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
-# Interactive script for archiving git branches as tags.
-# Designed to work with a Rietveld workflow.
+# Interactive script for renaming git branches to start with '_' to mark them as being uploaded to Rietveld.
 
 from __future__ import print_function
 import re

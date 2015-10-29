@@ -24,16 +24,25 @@
     "files": [
       "cks",
       "git-archive-branches",
+      "git-branch-uploaded",
       "git-checkout-downstream",
       "git-current-branch",
+      "git-downstream-branch",
       "git-squash-rebase",
       "git-stashswap",
-      "git-tracking-branch",
-      "git-uploaded-branch",
+      "git-upstream-branch",
       "regex",
       "s",
       "wpinfo",
       "ws"
+    ]
+  },
+  {
+    "directory": "~/scripts/utils",
+    "files": [
+      "__init__.py",
+      "downstream_branches.py",
+      "pick_item.py"
     ]
   }
 ]

@@ -16,6 +16,7 @@
     bs = bisect
     bsut = branch --set-upstream-to
     bsutom = branch --set-upstream-to origin/master
+    bu = branch-uploaded
     ca = commit -a
     caa = commit -a --amend -m ''
     cam = commit -a -m
@@ -32,6 +33,7 @@
     cou = checkout @{u}
     cu = cl upload --no-find-copies
     d = diff
+    db = downstream-branch
     dc = diff --color=auto
     dcc = diff --color=auto --cached
     dch = diff --color=auto HEAD
@@ -88,7 +90,7 @@
     td = tag -d
     tn1 = tag -n1
     tv = tag -v
-    ub = uploaded-branch
+    ub = upstream-branch
 [push]
     default = simple
 [http]
