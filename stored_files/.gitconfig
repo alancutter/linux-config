@@ -65,6 +65,7 @@
     mb = map-branches -v
     ms = merge --squash
     p = push
+    pom = push origin master
     pf = push -f
     rb = rebase
     rba = rebase --abort
