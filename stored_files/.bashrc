@@ -2,14 +2,14 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# Ensure display is set for SSH.
-export DISPLAY=:0.0
-
 # This section adds additional directories to the $PATH.
-export PATH=/usr/lib/ccache:"$PATH"
-export PATH=~/repos/depot_tools:"$PATH"
-export PATH=~/repos/blink/Tools/Scripts:"$PATH"
-export PATH=~/scripts:"$PATH"
+
+if [ -z "$CUSTOM_PATHS" ]; then
+    export CUSTOM_PATHS=1
+    export PATH=~/repos/depot_tools:"$PATH"
+    export PATH=~/repos/blink/Tools/Scripts:"$PATH"
+    export PATH=~/scripts:"$PATH"
+fi
 
 export GYP_CHROMIUM_NO_ACTION=1
 export EDITOR="subl -w"

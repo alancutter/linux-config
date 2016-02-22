@@ -70,8 +70,8 @@
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase --interactive
-    rbim = rebase --interactive origin/master
-    rbm = rebase origin/master
+    rbiom = rebase --interactive origin/master
+    rbom = rebase origin/master
     rbs = rebase --skip
     rh = reset --hard
     rhu = reset --hard @{u}
