@@ -48,8 +48,8 @@
     dwh = diff --color-words HEAD
     dwm = diff --color-words origin/master
     dwu = diff --color-words @{u}
-    f = fetch
-    fo = fetch origin
+    f = fetch --prune
+    fo = fetch --prune origin
     gpc = grep -n --color=auto
     h = help
     lc = log --color=auto
@@ -65,8 +65,10 @@
     mb = map-branches -v
     ms = merge --squash
     p = push
-    pom = push origin master
     pf = push -f
+    pa = push alancutter
+    pfa = push -f alancutter
+    pom = push origin master
     rb = rebase
     rba = rebase --abort
     rbc = rebase --continue
@@ -74,20 +76,21 @@
     rbiom = rebase --interactive origin/master
     rbom = rebase origin/master
     rbs = rebase --skip
+    rbu = rebase-update --no-fetch
     rh = reset --hard
-    rhu = reset --hard @{u}
     rhom = reset --hard origin/master
+    rhu = reset --hard @{u}
     rl = rev-list
     rl1 = rev-list -1
     rlc = rev-list --count
     rs = reset --soft
+    rsu = reset --soft @{u}
     s = stash
     sp = stash pop
     sr = squash-rebase
     ssp = stash show -p
     st = status
     t = tag
-    tb = tracking-branch
     td = tag -d
     tn1 = tag -n1
     tv = tag -v

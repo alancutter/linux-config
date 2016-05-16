@@ -14,6 +14,8 @@ fi
 export GYP_CHROMIUM_NO_ACTION=1
 export EDITOR="subl -w"
 export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
+export TESTURL="file://`echo ~/tests/test.html`"
+export GOPATH=~/repos/gopath
 
 # If not running interactively, don't do anything
 case $- in
