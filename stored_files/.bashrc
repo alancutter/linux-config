@@ -3,13 +3,10 @@
 # for examples
 
 # This section adds additional directories to the $PATH.
-
-if [ -z "$CUSTOM_PATHS" ]; then
-    export CUSTOM_PATHS=1
-    export PATH=~/repos/depot_tools:"$PATH"
-    export PATH=~/repos/blink/Tools/Scripts:"$PATH"
-    export PATH=~/scripts:"$PATH"
-fi
+export PATH=~/bin:"$PATH"
+export PATH=~/scripts:"$PATH"
+export PATH=~/repos/depot_tools:"$PATH"
+export PATH=~/repos/blink/Tools/Scripts:"$PATH"
 
 export GYP_CHROMIUM_NO_ACTION=1
 export EDITOR="subl -w"
