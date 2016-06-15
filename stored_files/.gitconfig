@@ -49,6 +49,7 @@
     dwm = diff --color-words origin/master
     dwu = diff --color-words @{u}
     f = fetch --prune
+    fa = fetch --prune alancutter
     fo = fetch --prune origin
     gpc = grep -n --color=auto
     h = help
