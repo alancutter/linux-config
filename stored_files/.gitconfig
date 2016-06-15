@@ -90,6 +90,7 @@
     sr = squash-rebase
     ssp = stash show -p
     st = status
+    sur = submodule update --recursive
     t = tag
     td = tag -d
     tn1 = tag -n1

@@ -7,6 +7,7 @@ export PATH=~/bin:"$PATH"
 export PATH=~/scripts:"$PATH"
 export PATH=~/repos/depot_tools:"$PATH"
 export PATH=~/repos/blink/Tools/Scripts:"$PATH"
+export PATH=~/bin/google_appengine:"$PATH"
 
 export GYP_CHROMIUM_NO_ACTION=1
 export EDITOR="subl -w"
