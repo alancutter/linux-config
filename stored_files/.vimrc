@@ -127,7 +127,7 @@ set colorcolumn=81
 hi ColorColumn ctermbg=Black guibg=Black
 
 " Show trailing whitespace
-highlight ExtraWhitespace ctermbg=52 guibg=52
+highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 " Add highlighting for function definition in C++.
