@@ -44,5 +44,11 @@
       "downstream_branches.py",
       "pick_item.py"
     ]
+  },
+  {
+    "directory": "~/.vim/colors",
+    "files": [
+      "wombat256i.vim"
+    ]
   }
 ]
