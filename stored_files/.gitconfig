@@ -20,7 +20,7 @@
     ca = commit -a
     caa = commit -a --amend -m ''
     cam = commit -a -m
-    cb = current-branch
+    cb = symbolic-ref --short HEAD
     cdf = clean -df
     cf = clean -f
     cm = commit -m
@@ -32,6 +32,7 @@
     com = checkout origin/master
     cou = checkout @{u}
     cu = cl upload --no-find-copies
+    current-branch = symbolic-ref --short HEAD
     d = diff
     db = downstream-branch
     dc = diff --color=auto

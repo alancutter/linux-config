@@ -10,7 +10,7 @@ export PATH=~/repos/blink/Tools/Scripts:"$PATH"
 export PATH=~/bin/google_appengine:"$PATH"
 
 export GYP_CHROMIUM_NO_ACTION=1
-export EDITOR="subl -w"
+export EDITOR="vim"
 export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
 export TESTURL="file://`echo ~/tests/test.html`"
 export GOPATH=~/repos/gopath

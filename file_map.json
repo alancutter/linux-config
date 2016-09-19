@@ -26,7 +26,6 @@
       "git-archive-branches",
       "git-branch-uploaded",
       "git-checkout-downstream",
-      "git-current-branch",
       "git-downstream-branch",
       "git-squash-rebase",
       "git-stashswap",
