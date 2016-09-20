@@ -30,4 +30,5 @@
     { "keys": ["alt+h"], "command": "move", "args": {"by": "subwords", "forward": false} },
     { "keys": ["alt+l"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
     { "keys": ["end"], "command": "move_to", "args": { "to": "hardeol" } },
+    { "keys": ["ctrl+;"], "command": "join_lines" },
 ]
