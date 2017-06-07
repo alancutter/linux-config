@@ -8,7 +8,7 @@ import subprocess
 
 
 def main():
-  m = re.match(r'# On branch (.+)', subprocess.check_output(['git', 'status']))
+  m = re.match(r'On branch (.+)', subprocess.check_output(['git', 'status']))
   if not m:
     print('Not currently on any branch.')
     return

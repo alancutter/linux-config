@@ -1,18 +1,3 @@
-" https://github.com/gmarik/Vundle.vim
-set nocompatible
-set runtimepath+=~/.vim/bundle/Vundle.vim
-filetype off
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'camelcasemotion'
-Plugin 'camelcasecomplete'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'L9'
-Plugin 'FuzzyFinder'
-Plugin 'Glench/Vim-Jinja2-Syntax'
-call vundle#end()
-filetype plugin indent on
-
 " Buffer shortcuts
 nmap <C-PageUp> :bprev<CR>
 nmap <C-PageDown> :bnext<CR>
@@ -36,16 +21,12 @@ map <Leader><Up>  <C-W>k
 map <Leader><Right>  <C-W>l
 
 " View shortcuts
-map <C-Down> 2<C-e>
-map <C-Up> 2<C-y>
-map <C-j> 2<C-e>
-map <C-k> 2<C-y>
+nnoremap J <C-e>
+nnoremap K <C-y>
+noremap <C-j> <PageDown>
+noremap <C-k> <PageUp>
 
 " Cursor shortcuts
-" ,b and ,w require camelcasemotion plugin.
-" <ESC>x is the same as Alt-x.
-nmap <ESC>b ,b
-nmap <ESC>w ,w
 nmap <ESC>j 8j
 nmap <ESC>k 8k
 nnoremap <F11> <C-t>
@@ -55,6 +36,7 @@ nmap <C-Right> w
 set whichwrap+=<,>,h,l
 
 " Editing shortcuts
+inoremap <C-q> <ESC>Ja
 nmap <S-Up> :m .-2<CR>
 nmap <S-Down> :m .+1<CR>
 nnoremap U <C-r>
@@ -90,22 +72,10 @@ command! -bar -nargs=1 -bang -complete=file Rename :
   \ endif |
   \ unlet s:file |
   \ unlet s:newfile
-" FuzzyFinder aliases.
-command FB FufBuffer
-command FBT FufBufferTag
-command FCF FufCoverageFile
-command FF FufFile
-command FJL FufJumpList
-command FL FufLine
-command FRC FufRenewCache
-command FT FufTag
-nmap <C-p> :FufCoverageFile<CR>
-nmap <S-r> :FufBufferTag<CR>
-nmap <C-r> :FufTag<CR>
-nmap <Leader>o :FufJumpList<CR>
 
 syntax on
 colorscheme wombat256i
+highlight Normal guibg=black
 set background=dark
 set encoding=utf-8
 set expandtab
@@ -121,7 +91,8 @@ set showcmd
 set smartindent
 set tabstop=4
 set tags+=tags;$HOME
-set timeoutlen=300
+set timeoutlen=100
+set ttimeoutlen=0
 set wildignore+=*.o,*.obj,.git,*.pyc,*.o.d
 set colorcolumn=81
 hi ColorColumn ctermbg=Black guibg=Black

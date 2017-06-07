@@ -9,7 +9,7 @@
       ".inputrc",
       ".screenrc",
       ".vimrc",
-      ".xinitrc"
+      ".Xmodmap"
     ]
   },
   {
@@ -23,14 +23,17 @@
     "directory": "~/scripts",
     "files": [
       "cks",
+      "dedupe-errors.py",
+      "duplicate-folders",
       "git-archive-branches",
       "git-branch-uploaded",
-      "git-checkout-downstream",
       "git-downstream-branch",
+      "git-pull-request-range",
       "git-squash-rebase",
       "git-stashswap",
       "git-upstream-branch",
       "s",
+      "slowmouse",
       "tweak",
       "wpinfo",
       "ws"

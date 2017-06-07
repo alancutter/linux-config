@@ -8,6 +8,7 @@
 [alias]
     a = apply
     aa = add --all .
+    aarbc = !git add -A && git rebase --continue
     ab = archive-branches
     ai = add -i
     b = branch
@@ -18,20 +19,22 @@
     bsutom = branch --set-upstream-to origin/master
     bu = branch-uploaded
     ca = commit -a
-    caa = commit -a --amend -m ''
+    caa = commit -a --amend --no-edit
     cam = commit -a -m
     cb = symbolic-ref --short HEAD
     cdf = clean -df
     cf = clean -f
+    clf = cl format
+    clu = cl upload --no-find-copies
     cm = commit -m
     cma = commit -m '' --amend
     co = checkout
     cob = checkout -t origin/master -b
-    cod = checkout-downstream
+    cod = !git checkout $(git downstream-branch)
     coh = checkout HEAD
     com = checkout origin/master
+    conflicts = diff --name-only --diff-filter=U
     cou = checkout @{u}
-    cu = cl upload --no-find-copies
     current-branch = symbolic-ref --short HEAD
     d = diff
     db = downstream-branch
@@ -56,7 +59,6 @@
     h = help
     lc = log --color=auto
     lc1 = log --color=auto -1
-    lcf = log --color=auto --follow
     lgc = log --graph --color=auto
     lpc = log -p --color=auto
     lpc1 = log -p --color=auto -1
@@ -70,6 +72,7 @@
     pf = push -f
     pa = push alancutter
     pfa = push -f alancutter
+    po = push origin
     pom = push origin master
     prr = pull-request-range
     rb = rebase
@@ -87,12 +90,17 @@
     rl1 = rev-list -1
     rlc = rev-list --count
     rs = reset --soft
+    rsom = reset --soft origin/master
     rsu = reset --soft @{u}
     s = stash
+    sa = stash apply
+    sb = squash-branch
+    sd = stash drop
+    sl = stash list
     sp = stash pop
     sr = squash-rebase
     srh = submodule foreach --recursive git reset --hard
-    ssp = stash show -p
+    ss = stash show -p
     st = status
     sur = submodule update --recursive
     t = tag
