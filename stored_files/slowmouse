@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xinput set-prop "Microsoft  Compact Optical Mouse 500" "Device Accel Velocity Scaling" 1

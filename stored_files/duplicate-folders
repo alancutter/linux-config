@@ -1,0 +1,34 @@
+#!/usr/bin/python
+
+# This script finds all subfolders with the same name.
+
+import os, sys
+
+def check(seen, dir_path, file_names):
+    dir_name = os.path.basename(dir_path)
+    if dir_name in seen:
+        seen[dir_name].append(dir_path)
+    else:
+        seen[dir_name] = [dir_path]
+
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        start_dir = sys.argv[1]
+    else:
+        start_dir = '.'
+
+    print 'Scanning:', os.path.abspath(start_dir)
+
+    seen = {}
+    os.path.walk(start_dir, check, seen)
+
+    count = 0
+    for dir_name in sorted(seen.keys()):
+        if len(seen[dir_name]) > 1:
+            count += 1
+            print dir_name
+            for dir_path in sorted(seen[dir_name]):
+                print '\t' + dir_path
+            print
+
+    print 'Found %s duplicate folder names.' % count
