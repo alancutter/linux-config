@@ -25,7 +25,7 @@
     cdf = clean -df
     cf = clean -f
     clf = cl format
-    clu = cl upload --no-find-copies
+    clu = cl upload --no-find-copies --gerrit
     cm = commit -m
     cma = commit -m '' --amend
     co = checkout
@@ -79,6 +79,7 @@
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase --interactive
+    rbicd = !git rebase -i $(git current-branch) $(git downstream-branch)
     rbiom = rebase --interactive origin/master
     rbom = rebase origin/master
     rbs = rebase --skip
