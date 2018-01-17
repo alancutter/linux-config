@@ -21,6 +21,7 @@
     ca = commit -a
     caa = commit -a --amend --no-edit
     cam = commit -a -m
+    camb = !git commit -a -m 'Branch: '$(git current-branch)
     cb = symbolic-ref --short HEAD
     cdf = clean -df
     cf = clean -f
@@ -41,11 +42,14 @@
     dc = diff --color=auto
     dcc = diff --color=auto --cached
     dch = diff --color=auto HEAD
+    dchno = diff --color=auto HEAD --name-only
     dchns = diff --color=auto HEAD --name-status
     dcm = diff --color=auto origin/master
+    dcmno = diff --color=auto origin/master --name-only
     dcmns = diff --color=auto origin/master --name-status
     dcns = diff --color=auto --name-status
     dcu = diff --color=auto @{u}
+    dcuno = diff --color=auto @{u} --name-only
     dcuns = diff --color=auto @{u} --name-status
     dd = describe --dirty
     dw = diff --color-words

@@ -52,7 +52,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 export TERM=xterm-256color
-HOST=$(echo $(hostname) | cut -d '.' -f 1)
+HOST=$(hostname)
 PS1="\[\e[1;31m\]${debian_chroot:+($debian_chroot)}\[\e[m\]\[\e[0;32m\][\t]\[\e[m\]\[\e[1;30m\]$HOST:\w\n$\[\e[m\] "
 
 # enable color support of ls and also add handy aliases
@@ -90,4 +90,8 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+fi
+
+if [ -f ~/.private_bashrc ]; then
+    . ~/.private_bashrc
 fi
