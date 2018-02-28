@@ -8,6 +8,7 @@
       ".gitconfig",
       ".inputrc",
       ".screenrc",
+      ".tmux.conf",
       ".vimrc",
       ".Xmodmap"
     ]
@@ -33,7 +34,6 @@
       "git-stashswap",
       "git-upstream-branch",
       "s",
-      "slowmouse",
       "tweak",
       "wpinfo",
       "ws"

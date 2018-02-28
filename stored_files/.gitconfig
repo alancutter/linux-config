@@ -26,7 +26,7 @@
     cdf = clean -df
     cf = clean -f
     clf = cl format
-    clu = cl upload --no-find-copies --gerrit
+    clu = cl upload
     cm = commit -m
     cma = commit -m '' --amend
     co = checkout
@@ -116,4 +116,4 @@
 [push]
     default = simple
 [http]
-    cookiefile = /usr/local/google/home/alancutter/.gitcookies
+	cookiefile = /usr/local/google/home/alancutter/.gitcookies
