@@ -10,7 +10,7 @@
       ".screenrc",
       ".tmux.conf",
       ".vimrc",
-      ".Xmodmap"
+      ".xsessionrc"
     ]
   },
   {
