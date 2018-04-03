@@ -66,3 +66,7 @@ $endif
 $endif
 "\ep":history-search-backward
 "\en":history-search-forward
+
+# vi mode editing
+# set editing-mode vi
+# set keymap vi-command

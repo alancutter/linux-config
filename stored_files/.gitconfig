@@ -26,6 +26,7 @@
     cdf = clean -df
     cf = clean -f
     clf = cl format
+    clp = cl presubmit --force
     clu = cl upload
     cm = commit -m
     cma = commit -m '' --amend
@@ -45,6 +46,7 @@
     dchno = diff --color=auto HEAD --name-only
     dchns = diff --color=auto HEAD --name-status
     dcm = diff --color=auto origin/master
+    dcmb = !git diff --color=auto $(git merge-base @{u} HEAD)
     dcmno = diff --color=auto origin/master --name-only
     dcmns = diff --color=auto origin/master --name-status
     dcns = diff --color=auto --name-status
