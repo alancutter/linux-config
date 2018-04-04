@@ -8,7 +8,7 @@ function compile-loop {
             rm -f /tmp/compile-success
             echo $(printf '%*s' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '_')
             echo Compile started
-            $1 | dde | head -n $(tput lines)
+            $1 | python ~/scripts/dedupe-errors.py | head -n $(tput lines)
             if [ \${PIPESTATUS[0]} -eq 0 ]; then
                 echo Compile success
                 touch /tmp/compile-success
@@ -18,6 +18,7 @@ function compile-loop {
     done
 }
 
+# Args: filepath
 function await-file {
     echo -n "Awaiting..."
     while [ ! -f $1 ]; do
