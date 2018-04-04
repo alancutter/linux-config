@@ -1,3 +1,5 @@
+alias acs="await-compile-success"
+alias acsocos="acs && ocos"
 alias awfd="adb wait-for-device"
 alias barkbarkbark="echo Bark bark bark\!"
 alias bb="nj ~/repos/chromium/src/out/release blink_tests image_diff"
