@@ -116,6 +116,6 @@
     tv = tag -v
     ub = upstream-branch
 [push]
-    default = simple
+    default = current
 [http]
 	cookiefile = /usr/local/google/home/alancutter/.gitcookies
