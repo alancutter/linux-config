@@ -61,6 +61,7 @@
     f = fetch --prune
     fa = fetch --prune alancutter
     fo = fetch --prune origin
+    g = grep
     gpc = grep -n --color=auto
     h = help
     lc = log --color=auto
@@ -91,12 +92,14 @@
     rbs = rebase --skip
     rbu = rebase-update --no-fetch
     rh = reset --hard
+    rhd = !git reset --hard $(git downstream-branch)
     rhom = reset --hard origin/master
     rhu = reset --hard @{u}
     rl = rev-list
     rl1 = rev-list -1
     rlc = rev-list --count
     rs = reset --soft
+    rsd = !git reset --soft $(git downstream-branch)
     rsom = reset --soft origin/master
     rsu = reset --soft @{u}
     s = stash

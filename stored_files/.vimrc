@@ -7,7 +7,6 @@ nmap <C-d> :bdelete<CR>
 nmap <C-d><C-y> :bdelete!<CR>
 nmap <C-s> :write<CR>
 imap <C-s> <C-o>:write<CR>
-nmap <Tab> :FufBuffer<CR>
 
 " Window shortcuts
 let mapleader=' '
