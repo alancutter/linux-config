@@ -5,6 +5,7 @@
 
 from __future__ import print_function
 import subprocess
+from utils.pick import pick_bool
 
 status_output = subprocess.check_output(['git', 'cl', 'status']).splitlines()
 status_output = status_output[1:status_output.index('')]
@@ -28,19 +29,6 @@ def pick_branch():
     except EOFError:
       print()
       return
-    except KeyboardInterrupt:
-      raise
-    except:
-      print('Invalid input')
-
-def pick_bool(prompt):
-  while True:
-    try:
-      input = raw_input(prompt + ' ([y]/n): ')
-      if input in ('', 'y'):
-        return True
-      elif input == 'n':
-        return False
     except KeyboardInterrupt:
       raise
     except:

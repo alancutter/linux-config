@@ -4,7 +4,7 @@ from __future__ import print_function
 import sys
 
 from utils.downstream_branches import get_downstream_branches
-from utils.pick_item import pick_item
+from utils.pick import pick_item
 
 
 def main():

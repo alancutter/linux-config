@@ -44,7 +44,7 @@
     "files": [
       "__init__.py",
       "downstream_branches.py",
-      "pick_item.py"
+      "pick.py"
     ]
   },
   {

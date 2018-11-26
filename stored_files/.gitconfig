@@ -10,26 +10,21 @@
     aa = add --all .
     aarbc = !git add -A && git rebase --continue
     ab = archive-branches
-    ai = add -i
     b = branch
     bd = branch -D
     bm = branch -m
-    bs = bisect
     bsut = branch --set-upstream-to
     bsutom = branch --set-upstream-to origin/master
     bu = branch-uploaded
-    ca = commit -a
     caa = commit -a --amend --no-edit
     cam = commit -a -m
     camb = !git commit -a -m 'Branch: '$(git current-branch)
-    cb = symbolic-ref --short HEAD
     cdf = clean -df
     cf = clean -f
     clf = cl format
     clp = cl presubmit --force
     clu = cl upload
     cm = commit -m
-    cma = commit -m '' --amend
     co = checkout
     cob = checkout -t origin/master -b
     cod = !git checkout $(git downstream-branch)
@@ -82,21 +77,19 @@
     po = push origin
     pom = push origin master
     prr = pull-request-range
-    rb = rebase
+    rb = rebase --strategy-option=no-renames
     rba = rebase --abort
     rbc = rebase --continue
-    rbi = rebase --interactive
-    rbicd = !git rebase -i $(git current-branch) $(git downstream-branch)
-    rbiom = rebase --interactive origin/master
-    rbom = rebase origin/master
+    rbi = rebase --strategy-option=no-renames --interactive
+    rbicd = !git rebase --strategy-option=no-renames -i $(git current-branch) $(git downstream-branch)
+    rbiom = rebase --strategy-option=no-renames --interactive origin/master
     rbs = rebase --skip
     rbu = rebase-update --no-fetch
     rh = reset --hard
     rhd = !git reset --hard $(git downstream-branch)
     rhom = reset --hard origin/master
     rhu = reset --hard @{u}
-    rl = rev-list
-    rl1 = rev-list -1
+    rl = reflog
     rlc = rev-list --count
     rs = reset --soft
     rsd = !git reset --soft $(git downstream-branch)
