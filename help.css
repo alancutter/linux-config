@@ -1,0 +1,307 @@
+﻿/* Styles for HOffice Help*/
+
+/* basic styles */
+body
+	{font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	font-size:12px;
+	color:#404957;
+	line-height : 1.3em;
+	margin-bottom: 20px;
+	background-color:#ffffff ;
+	margin-left: 0em;}
+
+a:link 		{color:#0287b1; text-decoration: underline; } 
+a:link:hover	{text-decoration: underline; }
+a:link:visited	{color: #800080; text-decoration: underline; }
+
+
+h1   /* TOP 대제목  --- */
+	{font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	line-height:1.3em;
+	font-size:14px;
+	margin-top:0.5em;
+	margin-left:0.5em;
+	margin-bottom:0.5em;
+	color:#116b82;}
+	
+h2	 /* 소제목  --- */
+	{font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	line-height:1.3em;
+	font-size:14px;	
+	margin-left:1.0em;
+	margin-right:1.5em;	
+	margin-top:1.5em;
+	margin-bottom:0.5em;	
+	font-weight: bold;
+	color:#3c80d1;}
+		
+h3	 /* 본문 작은 제목  --- */
+	{font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	line-height:1.3em;
+	font-size:14px;	
+	margin-left:2.3em;
+	margin-right:1.5em;	
+	margin-top:1em;
+	margin-bottom:0.0em;
+	font-weight: bold;
+	color:#0287b1;}
+
+h4	 /* .펼침 메뉴와 대화 상자 제목 --- */
+	{font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	font-size:14px;	
+	margin-left:2.0em;
+	margin-right:1.5em;	
+	margin-top:1em;
+	margin-bottom:0.0em;
+	font-weight: bold;
+	color:#69662B;}
+	
+h5	 /* .DropDown 제목   --- */
+	{font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	font-size:14px;	
+	margin-left:2.0em;
+	margin-right:1.5em;	
+	margin-top:1em;
+	margin-bottom:1.0em;
+	font-weight: bold;
+	color:#0287b1;}
+	
+h6	 /* .딸린 메뉴  --- */
+	{font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	font-size:14px;	
+	margin-left:5.3em;
+	margin-right:2.5em;
+	margin-top:0.5em;
+	margin-bottom:0.5em;	
+	font-weight: normal;
+	color:#0287b1;}
+	
+
+p
+	{
+	font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	font-size:14px;
+	line-height:1.3em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left:2.3em;
+	margin-right:1.5em;	
+	color:#404957
+	}
+
+p.ui-path
+	{font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	font-size:100%;
+	margin-right:1.5em;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	font-weight: bold;
+	color:#0287b1;}
+	
+p.refer
+	{margin-left: 4.0em;text-indent: -1.7em;}
+
+.footer
+	{
+	text-align: right;
+	margin-top: 2.0em;}		
+
+.related-title
+	{margin-top: 2.0em;
+	margin-left: -1.7em;
+	margin-right: -1.0em ;
+	margin-bottom: 0.5em ;
+	color:#0287b1;
+	background-color:rgb(228,228,228);
+	padding:3px ;
+	font-weight: bold;
+	text-indent: 1.8em; }
+
+.related-link
+	 { margin-top: 0.25em ; }
+.code
+	{
+	font-family:Courier New;
+	margin-top: 0.7em;
+	margin-bottom: 1.7em;
+	margin-left:2.3em;
+	margin-right:1.5em;	
+	padding-top:0.5em ;
+	padding-bottom:0.5em ;
+	padding-left:1em ;
+	padding-right:1em ;
+	background-color: #E7E7E7}
+	
+.definition
+	{
+	font-family:Courier New;
+	font-size: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left:4em;
+	margin-right:1.5em;	
+	font-style: italic;
+	}
+.definition-ref
+	{
+	font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	margin-left:3em;
+	margin-right:1.5em;	
+	padding-top:0em ;
+	padding-bottom:0.5em ;
+
+	}
+.macro-def	 /* .매크로 예제 제목(넥셀)  --- */
+	{
+	font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	font-size:100%;	
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	margin-left:2.3em;
+	margin-right:1.5em;
+	color:#0287b1;}	
+
+ol
+	{margin-top: 0.5em; 
+	margin-bottom: 0; 
+	margin-left: 3.0em; 
+	padding-left: 0em;
+	margin-right:2.0em }
+ul
+	{margin-top: 0.5em; 	
+	margin-bottom: 0;
+	list-style-type: disc;
+	margin-left: 2.5em;
+	padding-left: 0em;
+	margin-right: 1.5em; }
+		
+li
+	{font-size: 14px;
+	line-height: 1.3em;
+	margin-top: 0.3em; margin-left: 1.2em;}
+	
+.link 		{color:#0287b1; text-decoration: underline; font-weight: bold; } 
+.link:hover	{text-decoration: underline; }
+.link:visited	{color: #800080; text-decoration: underline; }
+
+.Menu_link 	{ font-size:75%; color:#0287b1; text-decoration: none; font-weight: bold; margin-left:0em; margin-right:0.5em;	} 
+.Menu_link:hover	{ font-size:75%; text-decoration: underline; }
+
+.Menu_link_s 	{color:#0287b1; text-decoration: underline; font-weight: normal; margin-left:0.5em; margin-right:1.5em;	} 
+.Menu_link_s:hover		{text-decoration: underline; }
+.Menu_link_s:visited	{color: #800080; text-decoration: underline; }
+
+.intro_link			{ color:#0287b1; text-decoration: underline; font-weight: bold; }
+.intro_link:hover		{ text-decoration: underline; }
+.intro_link:visited		{ color: #800080; text-decoration: underline; font-weight: bold; }	
+
+.intro_link2			{ color:#0287b1; text-decoration: underline; }
+.intro_link2:hover		{ color:#2376ca; text-decoration: underline; }
+.intro_link2:visited	{ color: #800080;  text-decoration: underline;}	
+	
+
+.table_link			{ text-decoration: underline; font-weight: normal; color: #0287b1 }
+.table_link:hover	{ text-decoration: underline; font-weight: normal; color: #0287b1 }
+.table_link:visited	{ text-decoration: underline; font-weight: normal; color: #800080 }
+
+.intro 
+	{font-size:14px; color:#0287b1; text-decoration: none; font-weight: normal; margin-top:1.5em; margin-left:1.1em; margin-right:0.8em; margin-bottom:10px; line-height:1.3em	} 	
+.intro2 
+	{font-size:14px; color:#0287b1; text-decoration: none; font-weight: normal; margin-top:0em; margin-left:1.1em; margin-right:0.8em; margin-bottom:10px; line-height:1.3em	} 	
+
+.intro3 
+	{color:#0287b1; 
+	text-decoration: none; 
+	font-weight: normal; 
+	margin-left:2.3em;
+	margin-right:1.5em;	
+	margin-top:1em;
+	margin-bottom:0.0em; }
+
+.table-list
+	{
+	font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	margin-top: 0.5em;
+	margin-bottom: 0em;
+	margin-left:0em;
+	margin-right:0em;	
+	}
+
+.bullet-list
+	{
+	font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;
+	line-height: 1.3em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left:0em;
+	margin-right:0em;	
+	}
+
+span	{font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움; }
+
+.factor
+	{color:#0287b1;}	 
+
+
+/* Figure  -------------------------------------------------------------------------- */
+
+.img01
+	{ margin-left: 0em; margin-top: 0.5em ; margin-right: 0em;  margin-bottom: 1.5em;}
+
+.img02
+	{ margin-left: 2.5em; margin-top: 0.5em ; margin-right: 0em;  margin-bottom: 1.5em;}	
+
+.img03
+	{ 
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left:0em;
+	margin-right:0em;
+	}
+
+	
+/* Table  -------------------------------------------------------------------------- */
+table
+ {font-size: 100%; font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;}
+
+.table01
+	{ margin-left: 1em; margin-top: 0em ; margin-right: 2em;  margin-bottom: 1em;}
+
+.table02
+	{ margin-left: 2.3em; margin-top: 0.5em ; margin-right: 2em;  margin-bottom: 1em;}
+
+.table03
+	{ margin-left: 0em; margin-top: 0.5em ; margin-right: 0em;  margin-bottom: 1.0em;}
+
+
+.Table 			{ background-color:#e1f5f2;}
+.Table_W		{ background-color:#ffffff;}
+
+.table_T 		{ font-size:100%; font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;;  font-weight: bold; color: #0287b1 }	
+.table_T_sub	{ font-size:100%; font-family:Arial, Verdana, Tahoma, Dotum, AppleGothic, Sans-serif, Dotum, 돋움;;  font-weight: normal; color: #0287b1; background-color:#ffffff; }
+.table_T_sub02	{ font-size:1%; width:0.1em; margin:0; padding:0; }
+.table_T_sub03	{ font-size:1%; height:0.1em; margin:0; padding:0; background-color:#ffffff;}
+	
+	
+/* TOP Background Color  ----------------------------------------------------------- */
+
+.Bg01 { background-color:#e8f8f7;}
+.Bg02 { background-color:#e8f8f7;}
+.Bg03 { background-color:#7bc3d1;}
+.Bg04 { background-color:#c0e3e8;}
+
+
+/* Dropdown styles ----------------------------------------------------------------- */
+
+/*.DropDown1	{font-size1:100%; text-decoration: none; color:#0B5292; font-weight: bold; top: 5pt; margin-left:0.5em} */
+.DropDown:hover	{text-decoration: underline; color:#0287b1; font-weight: bold; top: 5pt; margin-left:0.5em} 
+.DropDown:visited	{text-decoration: underline; color:#2376ca; font-weight: bold; top: 5pt; margin-left:0.5em} 
+.DropDown:link	{text-decoration: underline; color:#0287b1; font-weight: bold; top: 5pt; margin-left:0.5em} 
+
+.expall		{text-align: Right; margin-right: 1.5em; margin-top: 1em; margin-bottom: 1em; }
+
+.expanded	{font-weight: normal; }	
+
+.collapsed	{color:#0B5292; display: none;}				

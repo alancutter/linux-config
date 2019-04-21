@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myname.plugins.user"  android:versionCode="100" 
+    android:versionName="1.00" android:installLocation="auto">
+
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />
+  
+	<application android:label="matrix@awesomnonymous" android:icon="@drawable/icon" >
+
+		<activity android:name=".Installer" android:label="matrix@awesomnonymous">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		
+	</application>
+</manifest> 

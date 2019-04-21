@@ -1,0 +1,549 @@
+{
+  "version" : "22",
+  "engines" : [
+    {
+      "key" : "web",
+      "name" : "cn:搜索,tw:搜尋,zh_*:搜尋,ar_*:البحث,ca_*:Cerca,cs_*:Hledat,da_*:Søg,de_*:Suche,es_*:Buscar,fr_*:Recherche,in_*:Cari,it_*:Cerca,jp:検索,lt_*:Paieška,pl_*:Szukaj,pt_*:Pesquisa,ro_*:Căutare,ru_*:Поиск,tr_*:Ara,uk_*:Пошук,vi_*:Tìm kiếm,:Search",
+      "engines" : [
+        {
+          "key" : "Baidu",
+          "name" : "cn:百度,tw:百度,:Baidu",
+          "url" : "https://m.baidu.com/s?from=fooView&word=%s",
+          "home": "https://m.baidu.com",
+          "keyword" : "wd",
+          "condition" :  {
+            "location" : "zh||en_*"
+          },
+          "color" : "d90000"
+        },
+        {
+          "key" : "Sogou",
+          "name" : "cn:搜狗,tw:搜狗,:Sogou",
+          "url" : "https://m.sogou.com/web/searchList.jsp?keyword=%s",
+          "home": "https://m.sogou.com",
+          "keyword" : "keyword",
+          "condition" :  {
+            "location" : "cn"
+          },
+          "color" : "f84d19"
+        },
+        {
+          "key" : "bing.com",
+          "name" : "cn:必应,tw:繽紛,:Bing",
+          "url" : "https://www.bing.com/search?q=%s",
+          "home": "https://www.bing.com",
+          "keyword" : "q",
+          "color" : "ffb600"
+        },
+        {
+          "key" : "sm.cn",
+          "name" : "cn:神马",
+          "url" : "https://m.sm.cn/s?q=%s",
+          "home": "https://m.sm.cn",
+          "keyword" : "q",
+          "condition" :  {
+            "location" : "cn"
+          }
+        },
+        {
+          "key" : "Yahoo",
+          "name" : "cn:雅虎,tw:雅虎,:Yahoo",
+          "url" : "https://search.yahoo.com/search?p=%s",
+          "home": "https://search.yahoo.com",
+          "keyword" : "p",
+          "condition" :  {
+            "location" : "!jp"
+          },
+          "color" : "402583"
+        },
+        {
+          "key" : "Yahoo.JP",
+          "name" : ":Yahoo.JP",
+          "url" : "https://search.yahoo.co.jp/search?p=%s",
+          "home": "https://search.yahoo.co.jp",
+          "keyword" : "p",
+          "condition" :  {
+            "location" : "jp"
+          },
+          "color" : "402583"
+        },
+        {
+          "key" : "Google",
+          "name" : "cn:谷歌,tw:谷歌,:Google",
+          "url" : "https://www.google.com/search?safe=strict&q=%s",
+          "home": "https://www.google.com",
+          "keyword" : "q",
+          "color" : "0288d1"
+        },
+        {
+          "key" : "Yandex",
+          "name" : ":Yandex",
+          "url" : "https://www.yandex.com/search/touch/?text=%s",
+          "home": "https://www.yandex.com",
+          "keyword" : "text",
+          "condition" :  {
+            "location" : "!ru"
+          },
+          "color" : "d90000"
+        },
+        {
+          "key" : "Yandex.RU",
+          "name" : ":Яндекс",
+          "url" : "https://www.yandex.ru/search/touch/?text=%s",
+          "home": "https://www.yandex.ru",
+          "keyword" : "text",
+          "condition" :  {
+            "location" : "ru"
+          },
+          "color" : "d90000"
+        },
+        {
+          "key" : "Naver",
+          "name" : ":Naver",
+          "url" : "https://search.naver.com/search.naver?query=%s",
+          "home": "https://search.naver.com",
+          "keyword" : "query"
+        },
+        {
+          "key" : "DuckDuckGo",
+          "name" : ":DuckDuckGo",
+          "url" : "https://duckduckgo.com/?q=%s",
+          "home": "https://duckduckgo.com",
+          "keyword" : "q"
+        }
+      ]
+    },
+    {
+      "key" : "shopping",
+      "name" : "cn:购物,tw:購物,zh_*:購物,ar_*:التسوق,ca_*:Compres,cs_*:Nákupy,da_*:Indkøb,de_*:Einkaufen,es_*:Compras,fr_*:Shopping,in_*:Belanja,it_*:Shopping,jp:ショッピング,lt_*:Apsipirkti,pl_*:Zakupy,pt_*:Loja,ro_*:Cumpărături,ru_*:Шоппинг,tr_*:Alışveriş,uk_*:Покупки,vi_*:Mua sắm,:Shopping",
+      "engines" : [
+        {
+          "key" : "m.jd.com",
+          "name" : "cn:京东,tw:京東,:JingDong",
+          "url" : "https://m.jd.com/ware/search.action?keyword=%s",
+          "home" : "https://m.jd.com",
+          "keyword" : "keyword",
+          "condition" :  {
+            "location" : "cn"
+          },
+          "color" : "d90000"
+        },
+        {
+          "key" : "m.taobao.com",
+          "name" : "cn:淘宝,:Taobao",
+          "url" : "https://s.m.taobao.com/h5?q=%s",
+          "home" : "https://m.taobao.com",
+          "keyword" : "q",
+          "condition" :  {
+            "location" : "cn"
+          },
+          "color" : "ff4200"
+        },
+        {
+          "key" : "m.intl.taobao.com",
+          "name" : ":淘寶",
+          "url" : "https://m.intl.taobao.com/search/search.html?q=%s",
+          "home" : "https://m.intl.taobao.com",
+          "keyword" : "q",
+          "condition" :  {
+            "location" : "tw||hk"
+          },
+          "color" : "ff4200"
+        },
+        {
+          "key" : "amazon.com",
+          "name" : "cn:亚马逊,tw:亞馬遜,:Amazon",
+          "url" : "https://www.amazon.com/s/?field-keywords=%s",
+          "home": "https://www.amazon.com",
+          "keyword" : "field-keywords",
+          "condition" :  {
+            "location" : "!cn&&!de"
+          }
+        },
+        {
+          "key" : "amazon.cn",
+          "name" : ":亚马逊",
+          "url" : "https://www.amazon.cn/gp/aw/s/ref=is_s_?k=%s",
+          "home": "https://www.amazon.cn",
+          "keyword" : "k",
+          "condition" :  {
+            "location" : "cn"
+          }
+        },
+        {
+          "key" : "amazon.de",
+          "name" : "cn:亚马逊,tw:亞馬遜,:Amazon.de",
+          "url" : "https://www.amazon.de/s/?field-keywords=%s",
+          "home": "https://www.amazon.de",
+          "keyword" : "field-keywords",
+          "condition" :  {
+            "location" : "de"
+          }
+        },
+        {
+          "key" : "ebay.com",
+          "name" : ":eBay",
+          "url" : "https://m.ebay.com/sch/i.html?_nkw=%s",
+          "home": "https://m.ebay.com",
+          "keyword" : "_nkw",
+          "condition" :  {
+            "location" : "!cn&&!hk"
+          }
+        },
+        {
+          "key" : "ebay.com.hk",
+          "name" : ":eBay",
+          "url" : "https://m.ebay.com.hk/sch/i.html?_nkw=%s",
+          "home": "https://m.ebay.com.hk",
+          "keyword" : "_nkw",
+          "condition" :  {
+            "location" : "hk"
+          },
+          "color" : "006dba"
+        },
+        {
+          "key" : "enm.jd.com",
+          "name" : "cn:京东,tw:京東,:Joybuy",
+          "url" : "https://enm.jd.com/search/result/list?keyword=%s",
+          "home" : "https://enm.jd.com",
+          "keyword" : "keyword",
+          "condition" :  {
+            "location" : "!cn"
+          },
+          "color" : "d90000"
+        }
+      ]
+    },
+    {
+      "key" : "wiki",
+      "name" : "cn:百科,tw:百科,ru:Вики,:WiKi",
+      "engines" : [
+        {
+          "key" : "wapbaike.baidu",
+          "name" : "cn:百度百科,tw:百度百科,:BaiduBaike",
+          "url" : "https://wapbaike.baidu.com/item/%s",
+          "home": "https://wapbaike.baidu.com",
+          "keyword" : "word",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "d90000"
+        },
+        {
+          "key" : "zhihu",
+          "name" : "cn:知乎,tw:知乎,:ZhiHu",
+          "url" : "https://www.zhihu.com/search?type=content&q=%s",
+          "home": "https://www.zhihu.com",
+          "keyword" : "word",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "d90000"
+        },
+        {
+          "key" : "Wikipedia",
+          "name" : "cn:维基百科,tw:維基百科,ca:Vikipèdia,ru:Википедия,:Wikipedia",
+          "url" : "https://en.m.wikipedia.org/wiki/%s",
+          "home": "https://en.m.wikipedia.org",
+          "condition" :  {
+            "location" : "!de"
+          }
+        },
+        {
+          "key" : "Wikipedia.de",
+          "name" : ":Wikipedia.de",
+          "url" : "https://de.m.wikipedia.org/wiki/%s",
+          "home": "https://de.m.wikipedia.org",
+          "condition" :  {
+            "location" : "de"
+          }
+        }
+      ]
+    },
+    {
+      "key" : "Image",
+      "name" : "cn:图片,tw:圖片,zh_*:圖片,ar_*:صورة,ca_*:Imatge,cs_*:Obrázek,da_*:Billede,de_*:Bild,es_*:Imagen,fr_*:Image,in_*:Gambar,it_*:Immagine,jp:画像,lt_*:Paveikslėlis,pl_*:Obraz,pt_*:Imagem,ro_*:Imagine,ru_*:Изображение,tr_*:Görüntü,uk_*:Зображення,vi_*:Hình ảnh,:Image",
+      "engines" : [
+        {
+          "key" : "flickr",
+          "name" : ":flickr",
+          "url" : "https://www.flickr.com/search/?text=%s",
+          "home": "https://www.flickr.com",
+          "keyword" : "text",
+          "color" : "0066c6"
+        },
+        {
+          "key" : "GIPHY",
+          "name" : ":GIPHY",
+          "url" : "https://giphy.com/search/%s",
+          "home": "https://giphy.com"
+        }
+      ]
+    },
+	{
+      "key" : "video",
+      "name" : "cn:视频,tw:視頻,zh_*:視頻,ar_*:مقطع فيديو,ca_*:Vídeo,cs_*:Video,da_*:Video,de_*:Video,es_*:Vídeo,fr_*:Vidéo,in_*:Video,it_*:Video,jp:動画,lt_*:Video,pl_*:Wideo,pt_*:Vídeo,ro_*:Video,ru_*:Видео,tr_*:Video,uk_*:Відео,vi_*:Video,:Video",
+      "engines" : [
+        {
+          "key" : "iqiyi",
+          "name" : "cn:爱奇艺, :Iqiyi",
+          "url" : "https://m.iqiyi.com/search.html?key=%s",
+          "home": "https://m.iqiyi.com",
+          "keyword" : "key",
+          "condition" :  {
+            "location" : "cn"
+          },
+          "color" : "76a523"
+        },
+        {
+          "key" : "youku",
+          "name" : "cn:优酷, :youku",
+          "url" : "https://www.soku.com/m/y/video?q=%s",
+          "home": "https://www.youku.com",
+          "keyword" : "q",
+          "condition" :  {
+            "location" : "cn"
+          },
+          "color" : "0a92ff"
+        },
+        {
+          "key" : "qqvideo",
+          "name" : "cn:腾讯视频, :QQ",
+          "url" : "https://m.v.qq.com/search.html?keyWord=%s",
+          "home": "https://m.v.qq.com",
+          "keyword" : "keyWord",
+          "condition" :  {
+            "location" : "cn"
+          },
+          "color" : "66c200"
+        },
+        {
+          "key" : "le",
+          "name" : "cn:乐视视频, :le",
+          "url" : "https://m.le.com/search?wd=%s",
+          "home": "https://m.le.com",
+          "keyword" : "wd",
+          "condition" :  {
+            "location" : "cn"
+          },
+          "color" : "d70c19"
+        },
+        {
+          "key" : "YouTube",
+          "name" : ":YouTube",
+          "url" : "https://www.youtube.com/results?search_query=%s",
+          "home": "https://www.youtube.com",
+          "keyword" : "search_query"
+        }
+      ]
+    },
+    {
+      "key" : "music",
+      "name" : "cn:音乐,tw:音樂,zh_*:音乐,:Music",
+      "engines" : [
+        {
+          "key" : "XiaMi",
+          "name" : "cn:虾米音乐,tw:蝦米音樂,:XiaMi",
+          "url" : "https://h.xiami.com/#!/search/result/?key=%s",
+          "home": "https://h.xiami.com",
+          "keyword" : "xiami",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "ff6634"
+        }
+      ]
+    },
+    {
+      "key" : "map",
+      "name" : "cn:地图,tw:地圖,zh_*:地圖,ar_*:خريطة,ca_*:Mapa,cs_*:Mapa,da_*:Kort,de_*:Map,es_*:Mapa,fr_*:Carte,in_*:Peta,it_*:Mappa,jp:地図,lt_*:Žemėlapis,pl_*:Mapa,pt_*:Mapa,ro_*:Hartă,ru_*:Карта,tr_*:Harita,uk_*:Мапа,vi_*:Bản đồ,:Map",
+      "engines" : [
+        {
+          "key" : "BaiduMap",
+          "name" : "cn:百度地图,tw:百度地圖,:BaiduMap",
+          "url" : "https://map.baidu.com/mobile/webapp/search/search/qt=s&wd=%s",
+          "home": "https://map.baidu.com",
+          "keyword" : "wd",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "d90000"
+        },
+        {
+          "key" : "GaodeMap",
+          "name" : "cn:高德地图,tw:高德地圖,:GaodeMap",
+          "url" : "https://m.amap.com/search/mapview/keywords=%s",
+          "url_ua_pc": "https://ditu.amap.com/search?query=%s",
+          "home": "https://m.amap.com",
+          "keyword" : "keywords",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "0093fd"
+        },
+        {
+          "key" : "GoogleMap",
+          "name" : "cn:谷歌地图,tw:谷歌地圖,:GoogleMap",
+          "url" : "https://www.google.com/maps/place/%s",
+          "home": "https://www.google.com/maps",
+          "color" : "0288d1"
+        }
+      ]
+    },
+    {
+      "key" : "life",
+      "name" : "cn:生活,tw:生活,zh_*:生活,:Life",
+      "engines" : [
+        {
+          "key" : "DaZhongDianPing",
+          "name" : "cn:大众点评,tw:大衆點評,:DaZhongDianPing",
+          "url" : "https://m.dianping.com/shoplist/2/search?from=m_search&keyword=%s",
+          "home": "https://m.dianping.com",
+          "keyword" : "wd",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "ff6634"
+        },
+        {
+          "key" : "MeiTuan",
+          "name" : "cn:美团,tw:美團,:MeiTuan",
+          "url" : "https://i.meituan.com/s/-%s",
+          "home": "https://i.meituan.com",
+          "keyword" : "keywords",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "06c0b5"
+
+        },
+        {
+          "key" : "Eleme",
+          "name" : "cn:饿了么,tw:餓了麼,:Eleme",
+          "url" : "https://h5.ele.me/search/#/shop?keyword=%s",
+          "home": "https://h5.ele.me",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "008cff"
+        },
+        {
+          "key" : "Douban",
+          "name" : "cn:豆瓣,tw:豆瓣,:Douban",
+          "url" : "https://m.douban.com/search/?query=%s",
+          "home": "https://m.douban.com",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "689f38"
+        },
+        {
+          "key" : "Kuaidi100",
+          "name" : "cn:快递100,tw:快遞100,:Kuaidi100",
+          "url" : "https://m.kuaidi100.com/result.jsp?nu=%s",
+          "home": "https://m.kuaidi100.com",
+          "condition" :  {
+            "location" : "zh"
+          },
+          "color" : "0288d1"
+        }
+      ]
+    }
+  ],
+  "defaults" : [
+    {
+      "manufacturer" : "Amazon",
+      "engine" : "amazon.com"
+    },
+    {
+      "location": "kr||ko",
+      "engine" : "Naver"
+    },
+    {
+      "location": "cn",
+      "engine" : "Baidu"
+    },
+    {
+      "location": "ru",
+      "engine" : "Yandex.RU"
+    },
+    {
+      "location": "jp",
+      "engine" : "Yahoo.JP"
+    },
+    {
+      "engine" : "Google"
+    }
+  ],
+  "imageEngines" : [
+    {
+      "key" : "BaiduImage",
+      "name" : "cn:百度,tw:百度,:Baidu"
+    },
+    {
+      "key" : "GoogleImage",
+      "name" : "cn:谷歌,tw:谷歌,:Google"
+    },
+    {
+      "key" : "YandexImage",
+      "name" : "cn:Yandex,tw:Yandex,:Yandex"
+    },
+    {
+      "key" : "TinEyeImage",
+      "name" : ":TinEye"
+    },
+    {
+      "key" : "IqdbImage",
+      "name" : ":iqdb"
+    },
+    {
+      "key" : "SauceNaoImage",
+      "name" : ":SauceNAO"
+    }
+  ],
+  "translateEngines" : [
+    {
+      "key" : "GoogleTranslate",
+      "name" : "cn:谷歌,tw:谷歌,:Google",
+      "color" : "0288d1"
+    },
+    {
+      "key" : "BingTranslate",
+      "name" : "cn:必应,tw:繽紛,:Bing",
+      "color" : "ffb702"
+    },
+    {
+      "key" : "BaiduTranslate",
+      "name" : "cn:百度,tw:百度,:Baidu",
+      "condition" :  {
+        "location" : "zh"
+      },
+      "color" : "d90000"
+
+    },
+    {
+      "key" : "YoudaoTranslate",
+      "name" : "cn:有道词典,:YouDaoDictionary",
+      "condition" :  {
+        "location" : "zh"
+      },
+      "color" : "d61a2b"
+    },
+    {
+      "key" : "YoudaofanyiguanTranslate",
+      "name" : "cn:有道翻译官,:YouDaoTranslator",
+      "condition" :  {
+        "location" : "zh"
+      },
+      "color" : "d61a2b"
+    },
+    {
+      "key" : "EudicTranslate",
+      "name" : "cn:欧路词典,:EudicTranslator",
+      "condition" :  {
+        "location" : "zh"
+      },
+      "color" : "0288d1"
+    }
+  ]
+}
