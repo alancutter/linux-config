@@ -7,7 +7,7 @@ from __future__ import print_function
 import subprocess
 from utils.pick import pick_bool
 
-status_output = subprocess.check_output(['git', 'cl', 'status']).splitlines()
+status_output = subprocess.check_output(['git', 'cl', 'status', '--no-branch-color']).splitlines()
 status_output = status_output[1:status_output.index('')]
 branch_status_lines = (map(str.strip, line.split(' : ')) for line in status_output)
 branch_issues = {}

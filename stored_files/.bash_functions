@@ -1,3 +1,17 @@
+# Args:
+function await-compile-success {
+    await-file /tmp/compile-success
+}
+
+# Args: filepath
+function await-file {
+    echo -n "Awaiting..."
+    while [ ! -f $1 ]; do
+        sleep 1
+    done
+    echo "ready!"
+}
+
 # Args: compile-command entr-directories...
 function compile-loop {
     # Infinite while loop because entr crashes if a file goes missing.
@@ -18,17 +32,4 @@ function compile-loop {
                 echo Compile failed
             fi;"
     done
-}
-
-# Args: filepath
-function await-file {
-    echo -n "Awaiting..."
-    while [ ! -f $1 ]; do
-        sleep 1
-    done
-    echo "ready!"
-}
-
-function await-compile-success {
-    await-file /tmp/compile-success
 }

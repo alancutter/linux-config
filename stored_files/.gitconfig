@@ -8,7 +8,7 @@
 [alias]
     a = apply
     aa = add --all .
-    aarbc = !git add -A && git rebase --continue
+    aarbc = !git add --all && git rebase --continue
     ab = archive-branches
     b = branch
     bd = branch -D
@@ -21,7 +21,7 @@
     camb = !git commit -a -m 'Branch: '$(git current-branch)
     cdf = clean -df
     cf = clean -f
-    clf = cl format
+    clf = cl format --js
     clp = cl presubmit --force
     clu = cl upload
     cm = commit -m
@@ -30,8 +30,10 @@
     cod = !git checkout $(git downstream-branch)
     coh = checkout HEAD
     com = checkout origin/master
+    comb = !git checkout $(git merge-base @{u} HEAD)
     conflicts = diff --name-only --diff-filter=U
     cou = checkout @{u}
+    cpc = cherry-pick --continue
     current-branch = symbolic-ref --short HEAD
     d = diff
     db = downstream-branch
@@ -53,9 +55,9 @@
     dwh = diff --color-words HEAD
     dwm = diff --color-words origin/master
     dwu = diff --color-words @{u}
-    f = fetch --prune
-    fa = fetch --prune alancutter
-    fo = fetch --prune origin
+    f = fetch
+    fa = fetch alancutter
+    fo = fetch origin
     g = grep
     gpc = grep -n --color=auto
     h = help
@@ -68,8 +70,8 @@
     lpcns = log -p --color=auto --name-status
     lpgc = log -p --graph --color=auto
     lpgcns = log -p --graph --color=auto --name-status
+    ma = merge --abort
     mb = map-branches -v
-    ms = merge --squash
     p = push
     pf = push -f
     pa = push alancutter
@@ -115,3 +117,5 @@
     default = current
 [http]
 	cookiefile = /usr/local/google/home/alancutter/.gitcookies
+[advice]
+	detachedHead = false
