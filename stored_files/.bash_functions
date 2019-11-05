@@ -14,17 +14,27 @@ function await-file {
 
 # Args: out-dir target
 function build {
-    autoninja -C ~/repos/chromium/src/out/"$1" "$2"
+    local OUT_DIR="$1"
+    local TARGET="$2"
+    shift 2
+    autoninja -C ~/repos/chromium/src/out/"$OUT_DIR" "$TARGET"
 }
 
 # Args: out-dir target target-args...
 function build-and-open {
-    build "$1" "$2" && open $@
+    local OUT_DIR="$1"
+    local TARGET="$2"
+    shift 2
+    build "$OUT_DIR" "$TARGET" && open "$OUT_DIR" "$TARGET" $@
 }
 
 # Args: out-dir target gtest-filter
 function build-and-open-test {
-    build "$1" "$2" && open-test "$1" "$2" "$3"
+    local OUT_DIR="$1"
+    local TARGET="$2"
+    local GTEST_FILTER="$3"
+    shift 3
+    build "$OUT_DIR" "$TARGET" && open-test "$OUT_DIR" "$TARGET" "$GTEST_FILTER" $@
 }
 
 # Args: compile-command entr-directories...
@@ -51,13 +61,17 @@ function compile-loop {
 
 # Args: out-dir target target-args...
 function open {
-    local ABS_OUT_DIR=~/repos/chromium/src/out/"$1"
+    local OUT_DIR="$1"
     local TARGET="$2"
     shift 2
-    "$ABS_OUT_DIR"/"$TARGET" $@
+    ~/repos/chromium/src/out/"$OUT_DIR"/"$TARGET" $@
 }
 
-# Args: out-dir target gtest-filter
+# Args: out-dir target gtest-filter target-args...
 function open-test {
-    open "$1" "$2" --gtest_filter="$3"
+    local OUT_DIR="$1"
+    local TARGET="$2"
+    local GTEST_FILTER="$3"
+    shift 3
+    open "$OUT_DIR" "$TARGET" --gtest_filter="$GTEST_FILTER" $@
 }
