@@ -66,6 +66,7 @@
     lgc = log --graph --color=auto
     lpc = log -p --color=auto
     lpc1 = log -p --color=auto -1
+    lpc1no = log -p --color=auto -1 --name-only
     lpc1ns = log -p --color=auto -1 --name-status
     lpcns = log -p --color=auto --name-status
     lpgc = log -p --graph --color=auto

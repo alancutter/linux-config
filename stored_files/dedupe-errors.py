@@ -1,3 +1,4 @@
+import re
 import sys
 
 def look_ahead(n, source_iter):
@@ -7,7 +8,7 @@ def look_ahead(n, source_iter):
     if len(buffer) > n:
       buffer.pop(0)
     if len(buffer) == n:
-      yield tuple(buffer)
+      yield list(buffer)
 
 seen_errors = set()
 
@@ -17,4 +18,9 @@ for lines in look_ahead(3, sys.stdin):
     continue
   if ': error: ' in first_line or ': fatal error: ' in first_line:
     seen_errors.add(first_line)
+    lines[0] = re.sub(
+        r'([^/:]+):(\d+)',
+        lambda match: '\033[91m%s\033[0m:\033[91m%s\033[0m' % (match.group(1), match.group(2)),
+        first_line,
+        count=1)
     print(''.join(lines))
