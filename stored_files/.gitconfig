@@ -25,6 +25,7 @@
     clp = cl presubmit --force
     clu = cl upload
     cm = commit -m
+    cmb = !git commit -m 'Branch: '$(git current-branch)
     co = checkout
     cob = checkout -t origin/master -b
     cod = !git checkout $(git downstream-branch)
