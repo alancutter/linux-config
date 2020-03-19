@@ -17,6 +17,7 @@
     bsutom = branch --set-upstream-to origin/master
     bu = branch-uploaded
     caa = commit -a --amend --no-edit
+    caam = commit -a --amend -m
     cam = commit -a -m
     camb = !git commit -a -m 'Branch: '$(git current-branch)
     cdf = clean -df
@@ -74,6 +75,8 @@
     lpgcns = log -p --graph --color=auto --name-status
     ma = merge --abort
     mb = map-branches -v
+    mbom = merge-base origin/master
+    mbomh = merge-base origin/master HEAD
     p = push
     pf = push -f
     pa = push alancutter
