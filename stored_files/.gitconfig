@@ -121,6 +121,6 @@
 [push]
     default = current
 [http]
-	cookiefile = /usr/local/google/home/alancutter/.gitcookies
+	cookiefile = /home/alancutter/.gitcookies
 [advice]
 	detachedHead = false
