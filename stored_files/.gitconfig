@@ -35,6 +35,7 @@
     comb = !git checkout $(git merge-base @{u} HEAD)
     conflicts = diff --name-only --diff-filter=U
     cou = checkout @{u}
+    cpa = cherry-pick --abort
     cpc = cherry-pick --continue
     current-branch = symbolic-ref --short HEAD
     d = diff
@@ -70,6 +71,7 @@
     lpc1 = log -p --color=auto -1
     lpc1no = log -p --color=auto -1 --name-only
     lpc1ns = log -p --color=auto -1 --name-status
+    lpcno = log -p --color=auto --name-only
     lpcns = log -p --color=auto --name-status
     lpgc = log -p --graph --color=auto
     lpgcns = log -p --graph --color=auto --name-status
@@ -124,3 +126,5 @@
 	cookiefile = /home/alancutter/.gitcookies
 [advice]
 	detachedHead = false
+[color]
+	ui = auto
