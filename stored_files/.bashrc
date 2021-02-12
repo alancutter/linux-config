@@ -15,6 +15,9 @@ export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
 export TESTURL="file://`echo ~/tests/test.html`"
 export GOPATH=~/repos/gopath
 
+# https://chromium.googlesource.com/chromiumos/docs/+/HEAD/developer_guide.md#verify-that-your-default-file-permissions-umask_setting-is-correct
+umask 022
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
