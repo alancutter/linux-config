@@ -17,7 +17,7 @@ function build {
     local OUT_DIR="$1"
     local TARGET="$2"
     shift 2
-    nj ~/repos/chromium/src/out/"$OUT_DIR" "$TARGET"
+    nj ~/repos/chromium/src/out/"$OUT_DIR" "$TARGET" $@
 }
 
 # Args: out-dir target target-args...
