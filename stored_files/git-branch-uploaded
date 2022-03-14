@@ -1,14 +1,13 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Interactive script for renaming git branches to start with '_' to mark them as being uploaded to Rietveld.
 
-from __future__ import print_function
 import re
 import subprocess
 
 
 def main():
-  m = re.match(r'On branch (.+)', subprocess.check_output(['git', 'status']))
+  m = re.match(r'On branch (.+)', subprocess.check_output(['git', 'status']).decode('utf-8'))
   if not m:
     print('Not currently on any branch.')
     return

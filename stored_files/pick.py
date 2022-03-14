@@ -1,14 +1,13 @@
-from __future__ import print_function
 import sys
 
 
 def pick_bool(prompt):
   while True:
     try:
-      input = raw_input(prompt + ' ([y]/n): ')
-      if input in ('', 'y'):
+      user_input = input(prompt + ' ([y]/n): ')
+      if user_input in ('', 'y'):
         return True
-      elif input == 'n':
+      elif user_input == 'n':
         return False
     except KeyboardInterrupt:
       raise

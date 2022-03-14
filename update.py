@@ -1,6 +1,4 @@
-#!/usr/bin/python
-
-from __future__ import print_function
+#!/usr/bin/python3
 
 import os
 
@@ -49,12 +47,12 @@ def remove_stored_file(filename, contents):
 def main():
   file_dirs = load_file_dirs()
   stored_files = load_stored_files()
-  for filename, directory in file_dirs.iteritems():
+  for filename, directory in file_dirs.items():
     if filename in stored_files:
       update_stored_file(filename, directory, stored_files[filename])
     else:
       add_stored_file(filename, directory)
-  for filename, contents in stored_files.iteritems():
+  for filename, contents in stored_files.items():
     if filename not in file_dirs:
       remove_stored_file(filename, contents)
 

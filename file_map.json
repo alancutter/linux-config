@@ -25,13 +25,10 @@
     "files": [
       "cks",
       "dedupe-errors.py",
-      "duplicate-folders",
       "git-archive-branches",
       "git-branch-uploaded",
       "git-downstream-branch",
-      "git-pull-request-range",
       "git-squash-rebase",
-      "git-stashswap",
       "git-upstream-branch",
       "s",
       "setup-focus-shortcuts",

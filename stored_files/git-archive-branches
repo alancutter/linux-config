@@ -1,13 +1,12 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Interactive script for archiving git branches as tags.
 # Designed to work with a Rietveld workflow.
 
-from __future__ import print_function
 import subprocess
 from utils.pick import pick_bool
 
-status_output = subprocess.check_output(['git', 'cl', 'status', '--no-branch-color']).splitlines()
+status_output = subprocess.check_output(['git', 'cl', 'status', '--no-branch-color']).decode('utf-8').splitlines()
 status_output = status_output[1:status_output.index('')]
 branch_status_lines = (map(str.strip, line.split(' : ')) for line in status_output)
 branch_issues = {}
@@ -22,10 +21,10 @@ def pick_branch():
     for i, branch in enumerate(branches):
       print('  {}: {}\t({})'.format(i, branch, branch_issues[branch]))
     try:
-      input = raw_input('Select branch to archive, q to quit: ')
-      if input == 'q':
+      user_input = input('Select branch to archive, q to quit: ')
+      if user_input == 'q':
         return
-      return branches[int(input)]
+      return branches[int(user_input)]
     except EOFError:
       print()
       return
@@ -49,14 +48,14 @@ def create_tag(branch):
   try:
     subprocess.check_output(tag_command)
     return True
-  except subprocess.CalledProcessError, e:
+  except subprocess.CalledProcessError as e:
     print(e.output)
     if pick_bool('Try again with -f option to git tag?'):
       tag_command.insert(2, '-f')
       try:
         subprocess.check_output(tag_command)
         return True
-      except subprocess.CalledProcessError, e:
+      except subprocess.CalledProcessError as e:
         print(e.output)
   print('Tagging branch {} as {} failed'.format(branch, tag))
   return False
@@ -68,7 +67,7 @@ def remove_branch(branch):
     branch_issues.pop(branch)
     branches.remove(branch)
     return
-  except subprocess.CalledProcessError, e:
+  except subprocess.CalledProcessError as e:
     print(e.output)
   print('Deleting branch {} failed'.format(branch))
 

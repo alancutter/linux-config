@@ -14,7 +14,7 @@
     bd = branch -D
     bm = branch -m
     bsut = branch --set-upstream-to
-    bsutom = branch --set-upstream-to origin/master
+    bsutom = branch --set-upstream-to origin/main
     bu = branch-uploaded
     caa = commit -a --amend --no-edit
     caam = commit -a --amend -m
@@ -25,13 +25,14 @@
     clf = cl format --js
     clp = cl presubmit --force
     clu = cl upload
+    cluc = cl upload --skip-title --use-commit-queue
     cm = commit -m
     cmb = !git commit -m 'Branch: '$(git current-branch)
     co = checkout
-    cob = checkout -t origin/master -b
+    cob = checkout -t origin/main -b
     cod = !git checkout $(git downstream-branch)
     coh = checkout HEAD
-    com = checkout origin/master
+    com = checkout origin/main
     comb = !git checkout $(git merge-base @{u} HEAD)
     conflicts = diff --name-only --diff-filter=U
     cou = checkout @{u}
@@ -45,10 +46,7 @@
     dch = diff --color=auto HEAD
     dchno = diff --color=auto HEAD --name-only
     dchns = diff --color=auto HEAD --name-status
-    dcm = diff --color=auto origin/master
-    dcmb = !git diff --color=auto $(git merge-base @{u} HEAD)
-    dcmno = diff --color=auto origin/master --name-only
-    dcmns = diff --color=auto origin/master --name-status
+    dcmbu = !git diff --color=auto $(git merge-base @{u} HEAD)
     dcns = diff --color=auto --name-status
     dcu = diff --color=auto @{u}
     dcuno = diff --color=auto @{u} --name-only
@@ -56,7 +54,7 @@
     dd = describe --dirty
     dw = diff --color-words
     dwh = diff --color-words HEAD
-    dwm = diff --color-words origin/master
+    dwm = diff --color-words origin/main
     dwu = diff --color-words @{u}
     f = fetch
     fa = fetch alancutter
@@ -77,32 +75,32 @@
     lpgcns = log -p --graph --color=auto --name-status
     ma = merge --abort
     mb = map-branches -v
-    mbom = merge-base origin/master
-    mbomh = merge-base origin/master HEAD
+    mbom = merge-base origin/main
+    mbomh = merge-base origin/main HEAD
     p = push
     pf = push -f
     pa = push alancutter
     pfa = push -f alancutter
     po = push origin
-    pom = push origin master
+    pom = push origin main
     prr = pull-request-range
     rb = rebase --strategy-option=no-renames
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase --strategy-option=no-renames --interactive
     rbicd = !git rebase --strategy-option=no-renames -i $(git current-branch) $(git downstream-branch)
-    rbiom = rebase --strategy-option=no-renames --interactive origin/master
+    rbiom = rebase --strategy-option=no-renames --interactive origin/main
     rbs = rebase --skip
     rbu = rebase-update --no-fetch
     rh = reset --hard
     rhd = !git reset --hard $(git downstream-branch)
-    rhom = reset --hard origin/master
+    rhom = reset --hard origin/main
     rhu = reset --hard @{u}
     rl = reflog
     rlc = rev-list --count
     rs = reset --soft
     rsd = !git reset --soft $(git downstream-branch)
-    rsom = reset --soft origin/master
+    rsom = reset --soft origin/main
     rsu = reset --soft @{u}
     s = stash
     sa = stash apply
