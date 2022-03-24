@@ -14,7 +14,7 @@
     ]
   },
   {
-    "directory": "~/.config/sublime-text-3/Packages/User",
+    "directory": "~/.config/sublime-text/Packages/User",
     "files": [
       "Default (Linux).sublime-keymap",
       "Preferences.sublime-settings"
@@ -31,9 +31,8 @@
       "git-squash-rebase",
       "git-upstream-branch",
       "s",
-      "setup-focus-shortcuts",
-      "tweak",
-      "wpinfo",
+      "setup-focus-shortcuts.py",
+      "setup-system-monitor-cpu-colours.py",
       "ws"
     ]
   },
