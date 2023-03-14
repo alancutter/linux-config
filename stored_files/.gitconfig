@@ -35,6 +35,7 @@
     com = checkout origin/main
     comb = !git checkout $(git merge-base @{u} HEAD)
     conflicts = diff --name-only --diff-filter=U
+    cotb = checkout -t -b
     cou = checkout @{u}
     cpa = cherry-pick --abort
     cpc = cherry-pick --continue

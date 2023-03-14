@@ -76,6 +76,7 @@ syntax on
 colorscheme wombat256i
 highlight Normal guibg=black
 set background=dark
+set backspace=indent,eol,start
 set encoding=utf-8
 set expandtab
 set hidden
