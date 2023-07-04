@@ -24,3 +24,5 @@ for lines in look_ahead(3, sys.stdin):
         first_line,
         count=1)
     print(''.join(lines))
+
+print('Unique errors: %s' % len(seen_errors))
