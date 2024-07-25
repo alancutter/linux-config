@@ -1,0 +1,14 @@
+[alias]
+a = amend
+aa = add .
+auc = !(hg amend || true) && hg uploadchain
+cob = checkout p4base
+cop = checkout .^
+d = diff
+dp = diff --from=.^ --to=.
+f = fix
+fauc = !hg fix && (hg amend || true) && hg uploadchain
+h = help
+s = status
+p = presubmit
+x = xl
