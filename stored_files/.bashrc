@@ -3,18 +3,11 @@
 # for examples
 
 # This section adds additional directories to the $PATH.
-export PATH=~/bin:"$PATH"
 export PATH=~/scripts:"$PATH"
-export PATH=~/repos/depot_tools:"$PATH"
-export PATH=~/repos/blink/Tools/Scripts:"$PATH"
-export PATH=~/bin/google_appengine:"$PATH"
+export PATH=/mnt/ssd/repos/depot_tools:"$PATH"
 export PATH=~/.local/bin:"$PATH"
 
-export GYP_CHROMIUM_NO_ACTION=1
 export EDITOR="vim"
-export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
-export TESTURL="file://`echo ~/tests/test.html`"
-export GOPATH=~/repos/gopath
 
 # https://chromium.googlesource.com/chromiumos/docs/+/HEAD/developer_guide.md#verify-that-your-default-file-permissions-umask_setting-is-correct
 umask 022
