@@ -18,8 +18,9 @@
     "directory": "~/.config/sublime-text/Packages/User",
     "files": [
       "Default (Linux).sublime-keymap",
+      "Preferences.sublime-settings",
       "log.sublime-snippet",
-      "Preferences.sublime-settings"
+      "logjavast.sublime-snippet"
     ]
   },
   {
